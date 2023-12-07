@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/darkBlue"
+    android:padding="7dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/kacuna"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/alise_smith"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivImage"
+        app:layout_constraintTop_toTopOf="@+id/ivImage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icMessageType"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/ic_speaker"
+        app:layout_constraintBottom_toBottomOf="@+id/ivImage"
+        app:layout_constraintStart_toEndOf="@+id/ivImage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLastMessage"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/great_blabla_dublabla"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivImage"
+        app:layout_constraintStart_toEndOf="@+id/icMessageType" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/_4_20_pm"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUnreadMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/unread_msgs"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTime" />
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTyping"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/ic_typing"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <View
+        android:layout_width="321dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
